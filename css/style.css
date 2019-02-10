@@ -1,0 +1,48 @@
+a {
+  font-family: "Comfortaa", cursive;
+}
+
+nav .brand-logo {
+  padding-top: 5px;
+}
+
+.text-logo {
+  padding-left: 60px;
+  font-size: 30px;
+}
+
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
+
+.navbar-fixed {
+  z-index: 999;
+}
+
+.brand-logo::after {
+  content: "Cat Gallery";
+  position: relative;
+  bottom: 10px;
+  color: #ffee58;
+}
+
+.shadow-image {
+  box-shadow: 0px 1px 1px 0px rgba(189, 187, 189, 1);
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo::after {
+    content: "" !important;
+  }
+
+  .brand-logo img {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: block;
+  }
+}

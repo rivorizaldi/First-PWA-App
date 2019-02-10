@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- import material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:400,700"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#e65100" />
+  </head>
+  <!-- navbar start here -->
+  <nav>
+    <div class="orange darken-4 nav-wrapper ">
+      <a href="#" data-target="nav-mobile" class="waves-effect sidenav-trigger"
+        >&#9776;</a
+      >
+      <a href="#" class="brand-logo center"
+        ><img width="17%" src="images/pawprint.png" alt=""
+      /></a>
+      <ul id="nav-mobile" class="right sidenav orange darken-4 "></ul>
+    </div>
+  </nav>
+  <!-- navbar ends here -->
+
+  <div id="body-content" class="container"></div>
+
+  <body>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function() {
+              console.log("ServiceWorker is Registered!");
+            })
+            .catch(function() {
+              console.log("ServiceWorker is not Registered!");
+            });
+        });
+      } else {
+        console.log("This Browser is not Supported ServiceWorker Yet!");
+      }
+    </script>
+  </body>
+</html>
